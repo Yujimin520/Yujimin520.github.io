@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Hobbies</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: 'Arial Black', sans-serif;
+      margin: 0;
+      background: linear-gradient(to right, #1c1c1c, #2e2e2e);
+      color: #fff;
+      text-align: center;
+      min-height: 100vh;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideFadeIn 0.8s forwards;
+      background-image: url('https://wallpapercave.com/wp/wp2545281.jpg');
+      background-size: cover;
+      background-position: center;
+      overflow-y: auto;
+      padding-bottom: 3rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 1.5rem 0;
+      color: #ff0000;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    .hobby {
+      margin: 2rem auto;
+      max-width: 900px;
+      text-align: left;
+      background: rgba(0,0,0,0.65);
+      padding: 1.5rem 2rem;
+      border-radius: 10px;
+    }
+
+    .hobby h2 {
+      color: #ffd700;
+      margin-bottom: 1rem;
+    }
+
+    .hobby a {
+      color: #1f9cff;
+      text-decoration: none;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    .hobby a:hover {
+      text-decoration: underline;
+    }
+
+    .hobby img {
+      width: 120px;
+      height: auto;
+      margin: 10px;
+      border-radius: 6px;
+      box-shadow: 0 0 8px rgba(255,255,255,0.2);
+      vertical-align: middle;
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 2rem;
+      text-decoration: none;
+      background: #ff0000;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    a.button:hover {
+      background: #c60000;
+    }
+
+    .fade-out {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    @keyframes slideFadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My Hobbies</h1>
+
+  <!-- K-POP Section -->
+  <div class="hobby">
+    <h2>🎶 Watching Movies & K-Pop</h2>
+    <p>
+      <a href="https://www.youtube.com/@aespa" target="_blank">aespa</a>
+      <a href="https://www.youtube.com/@HEART2HEART_official" target="_blank">Heart2Heart</a>
+      <a href="https://www.youtube.com/@nmixx_official" target="_blank">NMIXX</a>
+      <a href="https://www.youtube.com/@IVE_official" target="_blank">IVE</a>
+      <a href="https://www.youtube.com/@BABYMONSTER" target="_blank">BABYMONSTER</a>
+      <a href="https://www.youtube.com/@GirlsGeneration" target="_blank">Girls' Generation</a>
+      <a href="https://www.youtube.com/@TWICE" target="_blank">TWICE</a>
+    </p>
+    <div>
+      <img src="https://nolae.eu/cdn/shop/articles/aespa-die-etwas-andere-girlgroup-470810.jpg?v=1647516359&width=1920" alt="aespa">
+      <img src="https://upload.wikimedia.org/wikipedia/en/2/27/NMIXX_Entwurf.jpg" alt="NMIXX">
+      <img src="https://upload.wikimedia.org/wikipedia/en/1/14/IVE_Eleven.jpg" alt="IVE">
+      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/BabyMonster_-_Sheesh.png/220px-BabyMonster_-_Sheesh.png" alt="BABYMONSTER">
+      <img src="https://upload.wikimedia.org/wikipedia/en/e/e9/Girls%27_Generation_%28album%29_cover.png" alt="Girls' Generation">
+      <img src="https://upload.wikimedia.org/wikipedia/en/b/bb/Twice_-_Eyes_Wide_Open.png" alt="TWICE">
+    </div>
+  </div>
+
+  <!-- Games Section -->
+  <div class="hobby">
+    <h2>🎮 Games</h2>
+    <p>
+      <a href="https://playvalorant.com" target="_blank">Valorant</a>
+      <a href="https://www.leagueoflegends.com" target="_blank">League of Legends</a>
+      <a href="https://www.honorofkings.com/global/" target="_blank">Honor of Kings</a>
+    </p>
+    <div>
+      <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1338770/capsule_616x353.jpg" alt="Valorant">
+      <img src="https://upload.wikimedia.org/wikipedia/en/7/77/League_of_Legends_logo.png" alt="LoL">
+      <img src="https://play-lh.googleusercontent.com/1I0NmSo4uVKd5dffVRAAXhy7D1IP8MKk4sKqu6oSKK9NoHX_6Yy6PXnYqZfBi4DUoQ" alt="Honor of Kings">
+    </div>
+  </div>
+
+  <!-- Manhwa / Manhua Section -->
+  <div class="hobby">
+    <h2>📚 Reading Manhwa / Manhua</h2>
+    <p>
+      <a href="https://asuratoon.com/" target="_blank">Asura Scans</a>
+      <a href="https://manhuaplus.org/" target="_blank">Manhua Plus</a>
+    </p>
+  </div>
+
+  <!-- Back Button -->
+  <a href="index.html" class="button link">Back to Home</a>
+
+  <!-- Click Sound -->
+  <audio id="clickSound" src="https://cdn.pixabay.com/audio/2022/03/15/audio_2289b40c35.mp3"></audio>
+
+  <script>
+    const link = document.querySelector('.link');
+    const clickSound = document.getElementById('clickSound');
+
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+      const href = this.getAttribute('href');
+      clickSound.play();
+      document.body.classList.add('fade-out');
+      setTimeout(() => {
+        window.location.href = href;
+      }, 500);
+    });
+  </script>
+
+</body>
+
+</html>
