@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Hobbies</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: 'Arial Black', sans-serif;
+      margin: 0;
+      background: linear-gradient(to right, #1c1c1c, #2e2e2e);
+      color: #fff;
+      text-align: center;
+      min-height: 100vh;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideFadeIn 0.8s forwards;
+      background-image: url('https://i.pinimg.com/736x/53/6c/e3/536ce3b834b06e8987c8e9b5f7d4f81b.jpg');
+      background-size: cover;
+      background-position: center;
+      overflow-y: auto;
+      padding-bottom: 3rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 1.5rem 0;
+      color: #ff0000;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    .hobby {
+      margin: 2rem auto;
+      max-width: 900px;
+      text-align: center;
+      background: rgba(0,0,0,0.65);
+      padding: 1.5rem 2rem;
+      border-radius: 10px;
+    }
+
+    .hobby h2 {
+      color: #ffd700;
+      margin-bottom: 1rem;
+    }
+
+    .hobby a {
+      color: #1f9cff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hobby a:hover {
+      text-decoration: underline;
+    }
+
+    .kpop-group {
+      margin-bottom: 2rem;
+    }
+
+    .kpop-group img {
+      width: 150px;
+      border-radius: 8px;
+      margin-top: 10px;
+      box-shadow: 0 0 8px rgba(255,255,255,0.2);
+    }
+
+    .games img {
+      width: 150px;
+      border-radius: 8px;
+      margin: 10px;
+      box-shadow: 0 0 8px rgba(255,255,255,0.2);
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 2rem;
+      text-decoration: none;
+      background: #ff0000;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    a.button:hover {
+      background: #c60000;
+    }
+
+    .fade-out {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    @keyframes slideFadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My Hobbies</h1>
+
+  <!-- K-POP Section -->
+  <div class="hobby">
+    <h2>🎶 K-Pop</h2>
+
+    <div class="kpop-group">
+      <a href="https://www.youtube.com/@aespa" target="_blank">Aespa</a><br>
+      <img src="https://cdn.k-ennews.com/news/photo/202412/6216_16779_02.jpg" alt="aespa">
+    </div>
+
+    <div class="kpop-group">
+      <a href="https://www.youtube.com/@HEART2HEART_official" target="_blank">Heart2Heart</a><br>
+      <img src="https://www.hellokpop.com/wp-content/uploads/2025/06/Hearts2Hearts-Style-400x242.jpg" ant="Heart2Heart">
+    </div>
+
+    <div class="kpop-group">
+      <a href="https://www.youtube.com/@nmixx_official" target="_blank">NMIXX</a><br>
+      <img src="https://static.wikia.nocookie.net/kpop-universe/images/5/5a/Nmixxgroupphoto.png/revision/latest?cb=20231227133433" alt="NMIXX">
+    </div>
+
+    <div class="kpop-group">
+      <a href="https://www.youtube.com/@IVE_official" target="_blank">IVE</a><br>
+      <img src="https://kpopisforeveryone.wordpress.com/wp-content/uploads/2023/03/ive.jpg" alt="IVE">
+    </div>
+
+    <div class="kpop-group">
+      <a href="https://www.youtube.com/@BABYMONSTER" target="_blank">BABYMONSTER</a><br>
+      <img src="https://kpopisforeveryone.wordpress.com/wp-content/uploads/2023/11/babymonster-profile.png?w=640" alt="BABYMONSTER">
+    </div>
+
+    <div class="kpop-group">
+      <a href="https://www.youtube.com/@GirlsGeneration" target="_blank">Girls' Generation</a><br>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWt2VpvOla7HfE_Any4RTTzL7iWoiJsArTzA&s" alt="Girls' Generation">
+    </div>
+
+    <div class="kpop-group">
+      <a href="https://www.youtube.com/@TWICE" target="_blank">TWICE</a><br>
+      <img src="https://imgix.bustle.com/uploads/image/2022/8/25/7e4b684c-1f25-43c0-bac7-e238d1702f2a-twice1.JPG" alt="TWICE">
+    </div>
+  </div>
+
+  <!-- Games Section -->
+  <div class="hobby">
+    <h2>🎮 Games</h2>
+    <div>
+      <a href="https://playvalorant.com" target="_blank">Valorant</a><br>
+      <a href="https://www.leagueoflegends.com" target="_blank">League of Legends</a><br>
+      <a href="https://www.honorofkings.com/global/" target="_blank">Honor of Kings</a>
+    </div>
+    <div class="games">
+      <img src="https://cdn.mos.cms.futurecdn.net/AFBeDytxebWeZxdcP6MsYM.jpg" alt="Valorant">
+      <img src="https://egamersworld.com/uploads/blog/1/17/1735564816859_1735564816859.webp" alt="LoL">
+      <img src="https://admin.esports.gg/wp-content/uploads/2024/06/Honor-of-Kings-HoK-Launch-Date-How-to-Download-System-Requirements-and-More-968x544.jpg" alt="Honor of Kings">
+    </div>
+  </div>
+
+  <!-- Manhwa / Manhua Section -->
+  <div class="hobby">
+    <h2>📚 Reading Manhwa / Manhua</h2>
+    <a href="https://asuratoon.com/" target="_blank">Asura Scans</a><br>
+    <a href="https://manhuaplus.org/" target="_blank">Manhua Plus</a>
+  </div>
+
+  <!-- Back Button -->
+  <a href="index.html" class="button link">Back to Home</a>
+
+  <!-- Click Sound -->
+  <audio id="clickSound" src="https://cdn.pixabay.com/audio/2022/03/15/audio_2289b40c35.mp3"></audio>
+
+  <script>
+    const link = document.querySelector('.link');
+    const clickSound = document.getElementById('clickSound');
+
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+      const href = this.getAttribute('href');
+      clickSound.play();
+      document.body.classList.add('fade-out');
+      setTimeout(() => {
+        window.location.href = href;
+      }, 500);
+    });
+  </script>
+
+</body>
+</html>

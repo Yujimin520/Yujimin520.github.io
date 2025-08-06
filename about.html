@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Me</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial Black', sans-serif;
+      color: #fff;
+      background-image: url('https://static.wikia.nocookie.net/transformers/images/2/22/Screenshot_2022-02-11_10.30.23.png/revision/latest?cb=20220212060237');
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      padding: 100px 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideFadeIn 0.8s forwards;
+    }
+
+    h1 {
+      color: #ff0000;
+      font-size: 3rem;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #ddd;
+      text-shadow: 1px 1px 3px black;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    a.button {
+      margin-top: 2rem;
+      display: inline-block;
+      text-decoration: none;
+      background: #ff0000;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+
+    .fade-out {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    @keyframes slideFadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>About Me</h1>
+  <p>I am Prime John , a transformative force ready to roll out and face any challenge that comes my way. Like Optimus Prime leading the Autobots, I navigate life with strength, resilience, and a mission to protect and uplift those around me. Adaptable and ever-evolving, I turn obstacles into opportunities and bring the spark of innovation and courage to every situation. With the heart of a warrior and the mind of a strategist, I’m always ready to transform the ordinary into the extraordinary—because with the right drive, there’s more than meets the eye. I bring the same energy and impact that Optimus Prime brings to every battle!</p>
+  <br>
+  <a href="index.html" class="button link">Back to Home</a>
+
+  <audio id="clickSound" src="https://cdn.pixabay.com/audio/2022/03/15/audio_2289b40c35.mp3"></audio>
+  <script>
+    const btn = document.querySelector('.link');
+    const sound = document.getElementById('clickSound');
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      sound.play();
+      document.body.classList.add('fade-out');
+      setTimeout(() => window.location.href = this.href, 500);
+    });
+  </script>
+</body>
+</html>
